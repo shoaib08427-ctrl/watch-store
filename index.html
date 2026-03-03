@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Shoaib Watch Store</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body{
+      font-family: Arial;
+      margin:0;
+      padding:0;
+      background:#f2f2f2;
+      text-align:center;
+    }
+    header{
+      background:black;
+      color:white;
+      padding:15px;
+      font-size:22px;
+    }
+    .product{
+      background:white;
+      margin:20px;
+      padding:20px;
+      border-radius:10px;
+      box-shadow:0 0 10px rgba(0,0,0,0.1);
+    }
+    img{
+      width:200px;
+    }
+    button{
+      padding:10px 20px;
+      margin-top:10px;
+      border:none;
+      border-radius:5px;
+      cursor:pointer;
+    }
+    .cart{
+      background:green;
+      color:white;
+    }
+    .whatsapp{
+      background:#25D366;
+      color:white;
+      display:block;
+      width:200px;
+      margin:20px auto;
+      text-decoration:none;
+      padding:10px;
+      border-radius:5px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  Shoaib Watch Store
+</header>
+
+<div class="product">
+  <h2>Luxury Black Watch</h2>
+  <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30" alt="Watch">
+  <p>Price: Rs 4,999</p>
+  <button class="cart" onclick="addToCart()">Add to Cart</button>
+</div>
+
+<h3 id="total">Total: Rs 0</h3>
+
+<a class="whatsapp" id="whatsappBtn" target="_blank">
+Order on WhatsApp
+</a>
+
+<script>
+  let total = 0;
+
+  function addToCart(){
+    total += 4999;
+    document.getElementById("total").innerText = "Total: Rs " + total;
+
+    document.getElementById("whatsappBtn").href =
+    "https://wa.me/923264708427?text=I want to order the watch. Total amount: Rs " + total;
+  }
+</script>
+
+</body>
+</html>
